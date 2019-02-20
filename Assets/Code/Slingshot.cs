@@ -5,7 +5,7 @@ using UnityEngine;
 public class Slingshot : MonoBehaviour {
     [Header("Set in Inspector")]
     public GameObject prefabProjectile;
-    public float velocityMult = 8f;
+    public float velocityMult = 10f;
 
     [Header("Set Dynamically")]
     public GameObject launchPoint;
@@ -70,6 +70,7 @@ public class Slingshot : MonoBehaviour {
             aimingMode = false;
             projectileRigidbody.isKinematic = false;
             projectileRigidbody.velocity = -mouseDelta * velocityMult;
+            FollowCam.POI = projectile;
             projectile = null;
         }
 
