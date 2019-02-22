@@ -8,7 +8,7 @@ public class FollowCam : MonoBehaviour
 
     [Header("Set in Inspector")]
     public float easing = 0.05f;
-    public Vector2 minXY = Vector2.zero;
+    public Vector2 minXY = Vector2.zero; // Vector 2.zero = (0,0)
 
     [Header("Set Dynamically")]
     public float camZ; //Desired Z pos of camera
